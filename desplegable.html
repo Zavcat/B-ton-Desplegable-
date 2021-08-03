@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #header{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        .menu{
+            list-style-type: none;
+            
+        }
+        .menu_link{
+        text-decoration: none;
+        background-color:#FC7323  ;
+        color: white;
+        padding: 10px 20px 10px 10px ;
+        margin: 1px;
+        display: block;
+        border: 5px solid #FC7323 ;
+        border-radius: 15px;
+        text-align:center;
+        }
+        .menu_link:hover{
+        text-decoration: none;
+        color: white;
+        background-color: orange;
+        font-size: small;
+        transition: all 0.5s;
+        border: 5px solid #FC7323 ;
+        border-radius: 15px;
+        }
+    
+        
+        .submenu_link{
+        text-decoration: none;
+        background-color:orangered;
+        color: white;
+        padding: 10px 20px 10px 10px ;
+        margin: 1px;
+        display: block;
+        border: 5px solid orangered;
+        border-radius: 15px;
+        text-align:center;
+       
+        }
+        .submenu_link:hover{
+        text-decoration: none;
+        color: white;
+        background-color: orange;
+        font-size: small;
+        transition: all 0.5s;
+        border: 5px solid orangered;
+        border-radius: 15px;
+        }
+    
+        #submenu{
+            display: none;
+            list-style-type: none;
+        }
+        #submenu2{
+            display: none;
+            list-style-type: none;
+        }
+        #submenu2a{
+            display: none;
+            list-style-type: none;
+        }
+        #submenu2b{
+            display: none;
+            list-style-type: none;
+        }
+         #submenu3{
+            display: none;
+            list-style-type: none;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <ul class="menu" >
+            <li ><a class="menu_link" href="https://investigacioncsfsena.blogspot.com/" >INICIO</a></li>
+            <li ><a class="menu_link" href="http://serviciosfinancierosena.blogspot.com/" target="_blank">BLOG CSF</a></li>
+            <li ><a class="menu_link" href="http://sennova.senaedu.edu.co/" target="_blank">SENNOVA</a></li>
+            <li ><a class="menu_link" href="https://publicacionescsfsenna.blogspot.com/" >PUBLICACIONES  ACADÉMICAS </a></li>
+            <li ><a style="cursor:pointer" class="menu_link" onclick="puerta();"  >SEMILLEROS</a>
+                <ul id="submenu">
+    <li ><a class="submenu_link" href="https://semilleroscsfsena.blogspot.com/" >Semilleros de Investigación</a></li>
+                    <li ><a class="submenu_link" href="https://semilleroscsfseninfo.blogspot.com/" >¿Qué es un Semillero de Investigación?</a></li>
+                    <li ><a class="submenu_link" href="https://semillerosdelcsfsena.blogspot.com/" >Semillero de Investigación del CSF</a></li>
+                    <li ><a class="submenu_link" href="https://semilleroscsfsenagesbanfi.blogspot.com/" >Semillero de Investigación GESBANFI</a></li>
+                </ul>
+            </li>
+            <li ><a class="menu_link" style="cursor:pointer"  onclick="puerta2();" >PROYECTOS DE INVESTIGACIÓN</a>
+                <ul id="submenu2">
+                    <li><a class="submenu_link"  style="cursor:pointer;" onclick="puerta2a();">Proyectos 2021</a></li>
+                        <li id="submenu2a" ><a class="submenu_link" >TAPPview<br/> Taller de Producción  </a></li>
+                    <li ><a class="submenu_link" style="cursor:pointer"onclick="puerta2b();" >Proyectos 2020</a></li>
+                        <li id="submenu2b" ><a class="submenu_link">TAPPview<br/> Taller de Producción Pedagógica Audiovisual  </a></li>   
+                    
+                </ul>
+            </li>
+            <li><a style="cursor:pointer" class="menu_link" onclick="puerta3();">GRUPO DE INVESTIGACIÓN GIDISF</a>
+    <ul id="submenu3">
+    <li><a class="submenu_link" href="https://lineasdeinvestigacionsennovacsf.blogspot.com/" >Lineas de Investigación</a></li>
+    </ul>
+    </li>
+    
+        </ul>
+    </div>
+    
+    <script type ="text/javascript">
+    
+    let estado = true;
+    function puerta(){
+        
+        if(estado){
+            estado = false;
+            document.getElementById("submenu").style.display = "block";
+        }else{
+            estado = true;
+            document.getElementById("submenu").style.display = "none";
+        }
+    }
+
+    let estado2 = true;
+    function puerta2(){
+        
+        if(estado2){
+            estado2 = false;
+            document.getElementById("submenu2").style.display = "block";
+        }else{
+            estado2 = true;
+            document.getElementById("submenu2").style.display = "none";
+        }
+    }
+    let estadoa = true;
+    function puerta2a(){
+        
+        if(estadoa == true){
+            estadoa = false;
+            document.getElementById("submenu2a").style.display = "block";
+        }else{
+            estadoa = true;
+            document.getElementById("submenu2a").style.display = "none";
+        }
+    }
+
+   let estadob = true;
+    function puerta2b(){
+        
+        if(estadob == true){
+            estadob = false;
+            document.getElementById("submenu2b").style.display = "block";
+        }else{
+            estadob = true;
+            document.getElementById("submenu2b").style.display = "none";
+        }
+    }
+
+    let estado3 = true;
+    function puerta3(){
+        
+        if(estado3){
+            estado3 = false;
+            document.getElementById("submenu3").style.display = "block";
+        }else{
+            estado3 = true;
+            document.getElementById("submenu3").style.display = "none";
+        }
+    }
+    
+    
+    </script> 
+    
+</body>
+</html>
+
+
+
+
+
+
+
+    
+
+
